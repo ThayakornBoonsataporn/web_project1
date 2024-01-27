@@ -8,6 +8,7 @@
     <title>JavaScript Pop-up</title>
   </head>
   <body>
+    <button id="popupButton" onclick="togglePopup()">Show Pop-up</button>
     <a-scene>
       <a-assets>
         <a-asset-item id="ocean" response-type="arraybuffer" src="https://cdn.glitch.me/4fc89268-7b85-4a5a-99c9-a2f22ee15798/ocean.glb?v=1706280479288"></a-asset-item>
@@ -15,10 +16,11 @@
         <a-asset-item id="ship" src="https://cdn.glitch.me/4fc89268-7b85-4a5a-99c9-a2f22ee15798/titanic.glb?v=1706289381972"></a-asset-item>
       </a-assets>
       
-      <a-entity gltf-model="#ship" position="0 1 -5" scale="0.1 0.1 0.1" rotation="0 180 0"></a-entity>
+      <a-entity gltf-model="#ship" position="0 1 -5" scale="0.1 0.1 0.1" rotation="0 180 0"
+                event-set__enter="_event: click; _target: #popup; visible: true;"></a-entity>
       
       <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9"
-             event-set__enter="_event: click; _traget: #popup; visible: true; color: #8FF7FF"
+             event-set__enter="_event: click; _target: #popup; visible: true; color: #8FF7FF"
              event-set__leave="_event: mouseleave; color: #4CC3D9"></a-box>
       
       <a-box color="red" position="0 1 5"></a-box>

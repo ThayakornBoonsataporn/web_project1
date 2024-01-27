@@ -14,11 +14,14 @@
         <a-asset-item id="ship" src="https://cdn.glitch.me/4fc89268-7b85-4a5a-99c9-a2f22ee15798/titanic.glb?v=1706289381972"></a-asset-item>
       </a-assets>
       
-      <a-entity gltf-model="#ship" position="0 1 -5" scale="0.1 0.1 0.1" rotation="0 180 0"
-                event-set__enter="_event: click; _target: #popup; visible: true;"></a-entity>
+      <a-assets>
+        <audio id="popupSound" src="https://cdn.glitch.global/4fc89268-7b85-4a5a-99c9-a2f22ee15798/Titanic%20-%20My%20heart%20will%20go%20on%20(Instrumental)%20%5BHQ%5D.mp4?v=1706351930200"></audio>
+      </a-assets>
       
+      <a-entity gltf-model="#ship" position="0 1 -5" scale="0.1 0.1 0.1" rotation="0 180 0"
+                event-set__enter="_event: click; _target: #popup; visible: true;"
+                event-set__mouseenter="_event: mouseenter; _target: #popupSound; components.sound.playSoundOnLoad=true"></a-entity>
     
-      <a-sound></a-sound>
       
       <a-sky color="#000036"></a-sky>
       

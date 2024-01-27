@@ -6,12 +6,6 @@
     <script src="https://cdn.jsdelivr.net/npm/aframe-simple-sun-sky@^1.2.2/simple-sun-sky.js"></script>
     <script src="https://unpkg.com/aframe-event-set-component@3.0.3/dist/aframe-event-set-component.min.js"></script>
     <title>JavaScript Pop-up</title>
-    <script>
-      // Function to show pop-up
-      function showPopup() {
-        alert("This is a JavaScript pop-up!");
-      }
-    </script>
   </head>
   <body>
     <a-scene>
@@ -21,10 +15,10 @@
         <a-asset-item id="ship" src="https://cdn.glitch.me/4fc89268-7b85-4a5a-99c9-a2f22ee15798/titanic.glb?v=1706289381972"></a-asset-item>
       </a-assets>
       
-      <!--<a-entity gltf-model="#ship" position="0 1 -5" scale="0.1 0.1 0.1" rotation="0 180 0"></a-entity>
+      <a-entity gltf-model="#ship" position="0 1 -5" scale="0.1 0.1 0.1" rotation="0 180 0"></a-entity>
       
       <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9"
-             event-set__enter="_event: click; color: #8FF7FF"
+             event-set__enter="_event: click; _traget: #popup; visible: true; color: #8FF7FF"
              event-set__leave="_event: mouseleave; color: #4CC3D9"></a-box>
       
       <a-box color="red" position="0 1 5"></a-box>
@@ -51,26 +45,12 @@
 
       </a-box>
       
-      <a-entity id="popup" position="0 2 0" visible="true">
-        <a-plane color="white" width="2" height="1"></a-plane>
-        <a-text value="This is a pop-up!" color="black" align="center" position="0 0.2 0"></a-text>
-        <a-animation attribute="scale" to="1 1 1" from="0.1 0.1 0.1" dur="500"></a-animation>
-      </a-entity>-->
-      
-      <a-entity gltf-model="#model" position="0 1 -0.40591" scale="0.3 0.3 0.3"></a-entity>
-      
-      <a-entity camera="" position="4.38905 1.63503 -0.26059" wasd-controls="" rotation="-0.9167324722093049 83.53724653007406 0" look-controls="" aframe-injected="" data-aframe-inspector-original-camera=""></a-entity>
-      
-      <a-box position="-1 2 -3" rotation="0 45 0" color="#4CC3D9" 
-       event-set__click="_event: click; _target: #popup; visible: true"></a-box>
-      
-      <a-camera><a-cursor></a-cursor></a-camera>
-      
       <a-entity id="popup" position="0 2 0" visible="false">
         <a-plane color="white" width="2" height="1"></a-plane>
         <a-text value="This is a pop-up!" color="black" align="center" position="0 0.2 0"></a-text>
         <a-animation attribute="scale" to="1 1 1" from="0.1 0.1 0.1" dur="500"></a-animation>
-      </a-entity>-->
+      </a-entity>
+    
     </a-scene>
   </body>
 </html>

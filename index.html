@@ -12,11 +12,19 @@
         <a-asset-item id="ocean3" response-type="arraybuffer" src="https://cdn.glitch.me/4fc89268-7b85-4a5a-99c9-a2f22ee15798/ocean_wave_sim.glb?v=1706285396308"></a-asset-item>
         <a-asset-item id="ship" src="https://cdn.glitch.me/4fc89268-7b85-4a5a-99c9-a2f22ee15798/titanic.glb?v=1706289381972"></a-asset-item>
       </a-assets>
-      <a-ocean color="grey" width="100" depth="100" density="32" speed="2" opacity="1"></a-ocean>
+      
       <a-entity gltf-model="#ship" position="0 1 -5" scale="0.2 0.2 0.2" rotation="0 180 0"></a-entity>
       <a-box color="red" position="0 1 5"></a-box>
       <a-sky color=""></a-sky>
       
+      <a-entity id="ocean1" ocean="density: 20; width: 50; depth: 50; speed: 3"
+                material="color: #9CE3F9; opacity: 0.9; metalness: 0; roughness: 1"
+                rotation="-90 0 0">
+      </a-entity>
+      
+      <a-entity id="light" light="type: ambient; color: "></a-entity>
+      
       <a-camera position="-1.339 0.998 45.786"></a-camera>
     </a-scene>
   </body>
+</html>

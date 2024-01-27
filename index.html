@@ -10,8 +10,7 @@
     <a-scene>
       <a-assets>
         <a-asset-item id="ocean" response-type="arraybuffer" src="https://cdn.glitch.me/4fc89268-7b85-4a5a-99c9-a2f22ee15798/ocean.glb?v=1706280479288"></a-asset-item>
-        <a-asset-item id="ocean2" response-type="arraybuffer" src="https://cdn.glitch.me/4fc89268-7b85-4a5a-99c9-a2f22ee15798/ocean_wave_-__wmaya.glb?v=1706282854669"></a-asset-item>
-        <a-asset-item id="ocean3" response-type="arraybuffer" src="https://cdn.glitch.me/4fc89268-7b85-4a5a-99c9-a2f22ee15798/ocean_wave_sim.glb?v=1706285396308"></a-asset-item>
+        <a-asset-item id="model" src="https://cdn.glitch.me/4fc89268-7b85-4a5a-99c9-a2f22ee15798/hintze_hall_nhm_london_surface_model.glb?v=1706345415297"></a-asset-item>
         <a-asset-item id="ship" src="https://cdn.glitch.me/4fc89268-7b85-4a5a-99c9-a2f22ee15798/titanic.glb?v=1706289381972"></a-asset-item>
       </a-assets>
       
@@ -50,6 +49,8 @@
         <a-text value="This is a pop-up!" color="black" align="center" position="0 0.2 0"></a-text>
         <a-animation attribute="scale" to="1 1 1" from="0.1 0.1 0.1" dur="500"></a-animation>
       </a-entity>
+      
+      <a-entity gltf-model="#model" position="0 1 -5" scale="0.1 0.1 0.1"></a-entity>
       
     </a-scene>
   </body>

@@ -11,7 +11,8 @@
     <a-scene>
       <a-assets>
         <a-asset-item id="aircraf" src="https://cdn.glitch.global/4fc89268-7b85-4a5a-99c9-a2f22ee15798/nasa_apollo_lunar_module.glb?v=1706366115501"></a-asset-item>
-        <a-asset-item id="astronaut" response-type="arraybuffer" src="https://cdn.glitch.me/4fc89268-7b85-4a5a-99c9-a2f22ee15798/animated_astronaut_in_space_suit_loop.glb?v=1706370386668"></a-asset-item>
+        <a-asset-item id="astronaut" src="https://cdn.glitch.me/4fc89268-7b85-4a5a-99c9-a2f22ee15798/animated_astronaut_in_space_suit_loop.glb?v=1706370386668"></a-asset-item>
+        <a-asset-item id="astronaut1" src="https://cdn.glitch.me/4fc89268-7b85-4a5a-99c9-a2f22ee15798/walking_astronaut%20(1).glb?v=1706372230303"></a-asset-item>
         <a-asset-item id="moon" src="https://cdn.glitch.me/4fc89268-7b85-4a5a-99c9-a2f22ee15798/moon_-_gagarin_crater.glb?v=1706360863825"></a-asset-item>
         <a-asset-item id="flag" response-type="arraybuffer" src="https://cdn.glitch.global/4fc89268-7b85-4a5a-99c9-a2f22ee15798/world_war_2_usa_flag_animation.glb?v=1706366118344"></a-asset-item>
       </a-assets>
@@ -21,7 +22,8 @@
       
       <a-entity gltf-model="#moon" position="0 -1 -5" scale="0.005 0.005 0.005"></a-entity>
       <a-entity gltf-model="#aircraf" position="2.17247 -1.01404 -5" scale="1.5 1.5 1.5" shadow="receive"></a-entity>
-      <a-entity id="astro1" gltf-model="#astronaut" position="2.172 -1.28139 2.32361" animation-mixer="clip:;"></a-entity>
+      <a-entity id="astro1" gltf-model="#astronaut1" position="2.172 -1.28139 3.32361" animation-mixer="clip:idle;"></a-entity>
+      <a-entity id="astro" gltf-model="#astronaut" position="2.172 -1.28139 2.32361" animation-mixer="clip:;"></a-entity>
       <a-entity gltf-model="#flag" position="2.17247 -1.01404 -2" scale="0.002 0.002 0.002"></a-entity>
       
       <a-camera><a-cursor color="whith"></a-cursor></a-camera>

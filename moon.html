@@ -10,17 +10,19 @@
   <body>
     <a-scene>
       <a-assets>
+        <a-asset-item id="aircraf" src="https://cdn.glitch.global/4fc89268-7b85-4a5a-99c9-a2f22ee15798/nasa_apollo_lunar_module.glb?v=1706366115501"></a-asset-item>
         <a-asset-item id="moon" src="https://cdn.glitch.me/4fc89268-7b85-4a5a-99c9-a2f22ee15798/moon_-_gagarin_crater.glb?v=1706360863825"></a-asset-item>
       </a-assets>
     
       
-      <a-sky color="#000036"></a-sky>
+      <a-sky color=""></a-sky>
       
       <a-entity gltf-model="#moon" position="0 -1 -5" scale="0.005 0.005 0.005"></a-entity>
+      <a-entity gltf-model="#aircraf" position="0 1 -5" scale="1 1 1"></a-entity>
       
       <a-camera><a-cursor color="whith"></a-cursor></a-camera>
       
-      <a-entity id="light" light="type: ambient;"></a-entity>
+      <a-entity id="light" light="type: ambient;" position="0 10 -3"></a-entity>
     
       
       <a-entity id="cameraRig">

@@ -12,21 +12,22 @@
       <a-assets>
         <a-asset-item id="aircraf" src="https://cdn.glitch.global/4fc89268-7b85-4a5a-99c9-a2f22ee15798/nasa_apollo_lunar_module.glb?v=1706366115501"></a-asset-item>
         <a-asset-item id="astronaut" src="https://cdn.glitch.me/4fc89268-7b85-4a5a-99c9-a2f22ee15798/animated_astronaut_in_space_suit_loop.glb?v=1706370386668"></a-asset-item>
-        <a-asset-item id="astronaut1" src="https://cdn.glitch.me/4fc89268-7b85-4a5a-99c9-a2f22ee15798/Walking%20astronaut.glb?v=1706372486324"></a-asset-item>
+        <a-asset-item id="sun" src="https://cdn.glitch.global/4fc89268-7b85-4a5a-99c9-a2f22ee15798/sun.glb?v=1706376450184"></a-asset-item>
         <a-asset-item id="moon" src="https://cdn.glitch.me/4fc89268-7b85-4a5a-99c9-a2f22ee15798/moon_-_gagarin_crater.glb?v=1706360863825"></a-asset-item>
         <a-asset-item id="flag" response-type="arraybuffer" src="https://cdn.glitch.global/4fc89268-7b85-4a5a-99c9-a2f22ee15798/world_war_2_usa_flag_animation.glb?v=1706366118344"></a-asset-item>
         <a-asset-item id="star" src="https://cdn.glitch.me/4fc89268-7b85-4a5a-99c9-a2f22ee15798/star_light_ball.glb?v=1706376452755"></a-asset-item>
       </a-assets>
     
       
-      <a-sky color="#star"></a-sky>
+      <a-sky color="black"></a-sky>
       
       <a-entity gltf-model="#moon" position="0 -1 -5" scale="0.005 0.005 0.005"></a-entity>
       <a-entity gltf-model="#aircraf" position="2.17247 -1.01404 -5" scale="1.5 1.5 1.5" shadow="receive"></a-entity>
       <a-entity id="astro1" gltf-model="#astronaut" position="-1.90353 -0.91089 -2.08588" animation-mixer="duration: 20" rotation="0 -2.5135658472389215 0"></a-entity>
       <a-entity id="astro" gltf-model="#astronaut" position="4.24783 -1.3257 6.29634" animation-mixer="startAt: 1" rotation="0 -28.126498162972112 0" shadow="receive"></a-entity>
       <a-entity gltf-model="#flag" position="5.03335 -1.31085 7.56387" scale="0.002 0.002 0.002" rotation="0 -69.14970333654392 0" animation-mixer="cilp:;"></a-entity>
-      <a-entity gltf-model="#star" position="5.03335 -1.31085 7.56387"></a-entity>
+      <a-entity gltf-model="#star" position="-100 -400 150" scale="6 6 6" rotation=""></a-entity>
+      <a-entity gltf-model="#sun" posintion="0 20 -5" scale="0.1 0.1 0.1"></a-entity>
       
       <a-camera><a-cursor color="whith"></a-cursor></a-camera>
       

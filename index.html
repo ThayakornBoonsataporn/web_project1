@@ -5,6 +5,13 @@
     <script src="https://cdn.jsdelivr.net/gh/c-frame/aframe-extras@7.2.0/dist/aframe-extras.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/aframe-simple-sun-sky@^1.2.2/simple-sun-sky.js"></script>
     <script src="https://unpkg.com/aframe-event-set-component@3.0.3/dist/aframe-event-set-component.min.js"></script>
+    <title>JavaScript Pop-up</title>
+    <script>
+      // Function to show pop-up
+      function showPopup() {
+        alert("This is a JavaScript pop-up!");
+      }
+    </script>
   </head>
   <body>
     <a-scene>
@@ -50,8 +57,19 @@
         <a-animation attribute="scale" to="1 1 1" from="0.1 0.1 0.1" dur="500"></a-animation>
       </a-entity>-->
       
-      <a-entity gltf-model="#model" position="0 1 -5" scale="0.3 0.3 0.3"></a-entity>
+      <a-entity gltf-model="#model" position="0 1 -0.40591" scale="0.3 0.3 0.3"></a-entity>
       
+      <a-entity camera="" position="4.38905 1.63503 -0.26059" wasd-controls="" rotation="-0.9167324722093049 83.53724653007406 0" look-controls="" aframe-injected="" data-aframe-inspector-original-camera=""></a-entity>
+      
+      <a-box position="-1 2 -3" rotation="0 45 0" color="#4CC3D9" 
+       event-set__click="_event: click; _target: #popup; visible: true"></a-box>
+      
+      <a-camera><a-cursor></a-cursor></a-camera>
+      
+      <div id="popup" style="display: none;">
+        <h2>This is a pop-up!</h2>
+        <p>Click anywhere outside this pop-up to close it.</p>
+      </div>
     </a-scene>
   </body>
 </html>

@@ -14,20 +14,22 @@
         <a-asset-item id="ship" src="https://cdn.glitch.me/4fc89268-7b85-4a5a-99c9-a2f22ee15798/titanic.glb?v=1706289381972"></a-asset-item>
       </a-assets>
       
-      <a-entity gltf-model="#ship" position="0 1 -5" scale="0.2 0.2 0.2" rotation="0 180 0"></a-entity>
-      <a-box color="red" position="0 1 5"></a-box>
-      <a-sky color="black"></a-sky>
+      <a-entity gltf-model="#ship" position="0 1 -5" scale="0.1 0.1 0.1" rotation="0 180 0"></a-entity>
+      <a-box color="red" position="0 1 5" light="type: point; color: #fff8dc"></a-box>
+      <a-sky color="#000036"></a-sky>
       
       <a-entity id="ocean1" ocean="density: 20; width: 50; depth: 50; speed: 3"
                 material="color: #9CE3F9; opacity: 0.9; metalness: 0; roughness: 1"
                 rotation="-90 0 0">
       </a-entity>
       
-      <a-entity id="light" light="type: ambient; color: #fff8dc"></a-entity>
+      <a-entity id="light" light="type: ambient;"></a-entity>
       
       <a-simple-sun-sky sun-position="1 24.931 0"></a-simple-sun-sky>
       
       <a-camera position="-1.339 0.998 45.786"></a-camera>
+      
+      <a-box color="red" position="-11.41869 1.52413 14.88899" material="color: #ffffff" geometry="depth: 2; height: 0.1" scale="2 0.49 1" rotation="-89.7062831102476 179.9998479605043 179.9998479605043"></a-box>
     </a-scene>
   </body>
 </html>

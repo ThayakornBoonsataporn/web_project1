@@ -66,10 +66,11 @@
       
       <a-camera><a-cursor></a-cursor></a-camera>
       
-      <div id="popup" style="display: none;">
-        <h2>This is a pop-up!</h2>
-        <p>Click anywhere outside this pop-up to close it.</p>
-      </div>
+      <a-entity id="popup" position="0 2 0" visible="false">
+        <a-plane color="white" width="2" height="1"></a-plane>
+        <a-text value="This is a pop-up!" color="black" align="center" position="0 0.2 0"></a-text>
+        <a-animation attribute="scale" to="1 1 1" from="0.1 0.1 0.1" dur="500"></a-animation>
+      </a-entity>-->
     </a-scene>
   </body>
 </html>

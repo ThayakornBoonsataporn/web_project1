@@ -42,13 +42,8 @@
       <a-entity gltf-model="#star" position="-100 -400 150" scale="6 6 6" rotation=""></a-entity>
       <a-entity gltf-model="#sun" scale="4 4 4" position="0 52.80932 477.7354"></a-entity>
       <a-entity gltf-model="#eart" position="-13.7689 -128.68212 -461.38592" scale="200 200 200" shadow="receive: true"></a-entity>
-      <a-entity gltf-model="#apollo" position="-111.64366 8.01417 -5" scale="3 3 3" shadow="cast: true" rotation="0 0 -17.50500655683691">
-        <a-animation attribute="rotation" 
-                     to="0 -360 0"
-                     repeat="indefinite"
-                     dur="500"
-                     easing="linear">
-        </a-animation>
+      <a-entity gltf-model="#apollo" position="-80.19788 8.01417 -5" scale="3 3 3" shadow="" rotation="16.148815455762254 58.24746241079462 -27.271645132636923"
+                event-set__enter="_event: click; _target: #ship-2; visible: true;">
       </a-entity>
       
       <a-camera><a-cursor color="whith"></a-cursor></a-camera>
@@ -73,6 +68,11 @@
       
       <a-plane id="ship" position="10.04371 4.45742 -3.32706" color="#6A8D92" width="5" height="1" material="color: #024750" geometry="height: 2" scale="1.5 1.5 1.5" rotation="0 -23.721025676211212 0" visible="false">
         <a-text position="-2.49299 0 0.01" align="left" value="spaceship" text="value: The Apollo 11 spacecraft was a space plane used on a special mission to send three pilots on the first lunar exploration in human history. It began with a launch on July 16, 1969 from Saturday afternoon 39A at NASA's Kennedy Space Center in Florida, USA.">
+        </a-text>
+      </a-plane>
+      
+      <a-plane id="ship-2" position="-73.29828 17.53615 -27.42577" color="#6A8D92" width="5" height="1" material="color: #024750" geometry="height: 1.6" scale="5 5 5" rotation="23.433973820850667 71.62201622253343 -2.220784413927071" visible="false">
+        <a-text position="-2.46731 0.019 0.01" align="left" value="spaceship" text="value: Michael Collins was an American astronaut who played a key role in the Apollo 11 flight. Michael Collins was in the Command Module that supported a three-person flight. and move around the moon until the two pilots return.">
         </a-text>
       </a-plane>
     

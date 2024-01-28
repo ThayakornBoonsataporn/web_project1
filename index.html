@@ -9,35 +9,42 @@
         init: function(){
           var myVideo = document.querySelector('#video');
           var videoControls = document.querySelector('#videocontrols');
-          this.el.addEventListener('click', function()){
+          var self = this;
+          videoControls.addEventListener('click', function(){ // ใช้ event listener กับ videoControls ไม่ใช่ this.el
             if(myVideo.paused){
               myVideo.play();
+              self.el.setAttribute('src', '#pause'); // ใช้ setAttribute เพื่อเปลี่ยนรูปภาพ
             }else{
               myVideo.pause();
+              self.el.setAttribute('src', '#play'); // ใช้ setAttribute เพื่อเปลี่ยนรูปภาพ
             }
-                                   }
+          });
         }
-      })
+      });
     </script>
     <title>JavaScript Pop-up</title>
   </head>
   <body>
     <a-scene>
       <a-assets>
-        <img id="playpause" src="https://cdn.glitch.global/4fc89268-7b85-4a5a-99c9-a2f22ee15798/play.png?v=1706447217949">
-        <video id="video" src="https://cdn.glitch.me/4fc89268-7b85-4a5a-99c9-a2f22ee15798/Untitled%20video%20-%20%E0%B8%AA%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%87%E0%B8%94%E0%B9%89%E0%B8%A7%E0%B8%A2%20Clipchamp.mp4?v=1706445803347"></video>
+        <img id="play" src="https://cdn.glitch.global/4fc89268-7b85-4a5a-99c9-a2f22ee15798/play.png?v=1706447217949">
+        <img id="pause" src="https://cdn.glitch.global/4fc89268-7b85-4a5a-99c9-a2f22ee15798/play.png?v=1706447217949">
+        <video id="video" src="https://cdn.glitch.me/4fc89268-7b85-4a5a-99c9-a2f22ee15798/Untitled%20video%20-%20%E0%B8%AA%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%87%E0%B8%94%E0%B9%89%E0%B8%A7%E0%B8%A2%20Clipchamp.mp4?v=1706445803347" loop="true"></video>
       </a-assets>
       
       <a-video src="#video" width="10" height="5" position="0 3 -9">
-        <a-image id="videocontrols" src="#playpause" position="-1 -3 0" scale="0.5 0.5 1" play-pause></a-image>
+        <a-image id="videocontrols" src="#play" position="-1 -3 0" scale="0.5 0.5 1" play-pause></a-image>
       </a-video>
       
-      <a-text value="sasdsad" color="white" position="0 0 -9"></a-text>
+      
+      <a-link href="moon.html">
+        <a-text value="Mission to the Moon" color="white" position="0 0 -9"></a-text>
+      </a-link>
       
       <a-sky color="black"></a-sky>
       
-      <a-camera>
-        <a-cursor></a-cursor>
+      <a-camera wasd-controls-enabled="false" look-controls-enabled="true">
+        <a-cursor color="grey"></a-cursor>
       </a-camera>
       
       

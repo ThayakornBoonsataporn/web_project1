@@ -28,6 +28,7 @@
       <a-entity gltf-model="#moon" position="0 -1 -5" scale="0.005 0.005 0.005" shadow="receive: true"></a-entity>
       <a-entity gltf-model="#spaceship" position="2.17247 -1.01404 -5" scale="1.5 1.5 1.5" shadow="cast: true" sound="src:#sang; on:click;"
                 event-set__enter="_event: click; _target: #ship; visible: true;">
+        <a-animation sttibut></a-animation>
       </a-entity>
       
       <a-entity id="buzz" gltf-model="#astronaut" position="-1.90353 -0.91089 -2.08588" animation-mixer="duration: 20" rotation="0 -2.5135658472389215 0" sound="src:#buzzsound; on:click;" shadow="cast: true"

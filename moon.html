@@ -18,6 +18,7 @@
         <a-asset-item id="star" src="https://cdn.glitch.me/4fc89268-7b85-4a5a-99c9-a2f22ee15798/star_light_ball.glb?v=1706376452755"></a-asset-item>
         <a-asset-item id="eart" src="https://cdn.glitch.me/4fc89268-7b85-4a5a-99c9-a2f22ee15798/3d_planet_earth_transparent_bg.glb?v=1706376462491"></a-asset-item>
         <audio id="sang" src="https://cdn.glitch.global/4fc89268-7b85-4a5a-99c9-a2f22ee15798/Aerosmith%20-%20I%20Don't%20Want%20to%20Miss%20a%20Thing%20-%20Guitar%20Cover%20by%20Kfir%20Ochaion%20-%20Universal%20Audio%20Woodrow%20(320%20kbps).mp3?v=1706379245155"></audio>
+        <a-mixin id="panel" material="shader:flat;transparent:true;" look-at="[camera]"></a-mixin>
       </a-assets>
     
       
@@ -37,8 +38,22 @@
     
       
       <a-entity id="cameraRig" movement-controls="constrainToNavMesh: true">
-        <a-entity position="0 0.998 0" look-controls></a-entity>
+        <a-camera position="0 0.998 0" look-controls></a-camera>
       </a-entity>
+      
+      <a-entity id="description" position="0 6 -6">
+            <a-text value="SWITCHING BETWEEN VIEW CONTEXT" align="center"></a-text>
+            <a-plane mixin="panel" position="0 -1 0" color="#1D1E2C" width="5" height="1">
+                <a-text position="-2 0 0.01" align="left"
+                    value="clicking on image will produce\nswitching between view context,\nand opening page url in iframe">
+                </a-text>
+            </a-plane>
+            <a-plane position="0 -2.1 0" color="#6A8D92" width="5" height="1">
+                <a-text position="-2 0 0.01" align="left"
+                    value="usefull case for integrating external\nfull-functional web pages, or view web\n applications without scene reload">
+                </a-text>
+            </a-plane>
+        </a-entity>
     
     </a-scene>
   </body>

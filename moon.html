@@ -43,10 +43,12 @@
       <a-entity gltf-model="#sun" scale="4 4 4" position="0 52.80932 477.7354"></a-entity>
       <a-entity gltf-model="#eart" position="-13.7689 -128.68212 -461.38592" scale="200 200 200" shadow="receive: true"></a-entity>
       <a-entity gltf-model="#apollo" position="-111.64366 8.01417 -5" scale="3 3 3" shadow="cast: true" rotation="0 0 -17.50500655683691">
-        <a-animation attribute="rotation" to="0 -360 0"
+        <a-animation attribute="rotation" 
+                     to="0 -360 0"
                      repeat="indefinite"
-                     dur="5000"
-                     easing="linear"></a-animation>
+                     dur="500"
+                     easing="linear">
+        </a-animation>
       </a-entity>
       
       <a-camera><a-cursor color="whith"></a-cursor></a-camera>

@@ -26,9 +26,12 @@
       
       <a-sky color="black"></a-sky>
       <a-entity gltf-model="#moon" position="0 -1 -5" scale="0.005 0.005 0.005" shadow="receive: true"></a-entity>
-      <a-entity gltf-model="#spaceship" position="2.17247 -1.01404 -5" scale="1.5 1.5 1.5" shadow="cast: true" sound="src:#sang; on:click;"></a-entity>
-      <a-entity id="buzz" gltf-model="#astronaut" position="-1.90353 -0.91089 -2.08588" animation-mixer="duration: 20" rotation="0 -2.5135658472389215 0" sound="src:#sang; on:click;" shadow="cast: true"></a-entity>
-      <a-entity id="astro" gltf-model="#astronaut" position="4.24783 -1.3257 6.29634" animation-mixer="startAt: 1" rotation="0 -28.126498162972112 0" shadow="cast: true"></a-entity>
+      <a-entity gltf-model="#spaceship" position="2.17247 -1.01404 -5" scale="1.5 1.5 1.5" shadow="cast: true" sound="src:#sang; on:click;"
+                event-set__enter="_event: click; _target: #ship; visible: true;">
+        <a-animation begin="click" attribute="visible" to="false" dur="10000"></a-animation>
+      </a-entity>
+      <a-entity id="buzz" gltf-model="#astronaut" position="-1.90353 -0.91089 -2.08588" animation-mixer="duration: 20" rotation="0 -2.5135658472389215 0" sound="src:#buzzsound; on:click;" shadow="cast: true"></a-entity>
+      <a-entity id="astro" gltf-model="#astronaut" position="4.24783 -1.3257 6.29634" animation-mixer="startAt: 1" rotation="0 -28.126498162972112 0" sound="src:#nilesound; on:click;" shadow="cast: true"></a-entity>
       <a-entity gltf-model="#flag" position="5.03335 -1.31085 7.56387" scale="0.002 0.002 0.002" rotation="0 -69.14970333654392 0" animation-mixer="cilp:;" shadow="cast: true"></a-entity>
       <a-entity gltf-model="#star" position="-100 -400 150" scale="6 6 6" rotation=""></a-entity>
       <a-entity gltf-model="#sun" scale="4 4 4" position="0 52.80932 477.7354"></a-entity>
@@ -44,12 +47,12 @@
       </a-entity>
       
 
-      <a-plane position="-5.89323 1.36625 -2.13841" color="#1D1E2C" width="5" height="1" material="" geometry="width: 6; height: 1.5" scale="" visible="false">
+      <a-plane id="cardbuzz" position="-5.89323 1.36625 -2.13841" color="#1D1E2C" width="5" height="1" material="" geometry="width: 6; height: 1.5" scale="" visible="false">
         <a-text position="-2.40284 0 0.01" align="left" value="buzz" text="value: Buzz Aldrin is an American astronaut famous in the world for being the second pilot to stand on the surface of the moon after Neil Armstrong. By Buzz Aldrin Worked with Neil Armstrong to explore and study the lunar surface. and organize the work required in that mission">
         </a-text>
       </a-plane>
       
-      <a-plane position="4.41245 2.72693 6.23068" color="#6A8D92" width="5" height="1" material="" geometry="" rotation="0 -34.04973584903456 0" visible="false">
+      <a-plane id="cardnile" position="4.41245 2.72693 6.23068" color="#6A8D92" width="5" height="1" material="" geometry="" rotation="0 -34.04973584903456 0" visible="false">
         <a-text position="-2.47352 0 0.01" align="left" value="Nile" text="value: Neil Armstrong was an American astronaut who was the first person to stand on the lunar surface on July 20, 1969, during the Apollo 11 space flight.">
         </a-text>
       </a-plane>

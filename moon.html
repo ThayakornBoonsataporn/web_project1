@@ -20,6 +20,7 @@
         <audio id="nilesound" src="https://cdn.glitch.global/4fc89268-7b85-4a5a-99c9-a2f22ee15798/nile.mp3?v=1706421183468"></audio>
         <audio id="buzzsound" src="https://cdn.glitch.global/4fc89268-7b85-4a5a-99c9-a2f22ee15798/buzz.mp3?v=1706421184675"></audio>
         <audio id="sang" src="https://cdn.glitch.global/4fc89268-7b85-4a5a-99c9-a2f22ee15798/Aerosmith%20-%20I%20Don't%20Want%20to%20Miss%20a%20Thing%20-%20Guitar%20Cover%20by%20Kfir%20Ochaion%20-%20Universal%20Audio%20Woodrow%20(320%20kbps).mp3?v=1706379245155"></audio>
+        <a-asset-item id="apollo" src="https://cdn.glitch.me/4fc89268-7b85-4a5a-99c9-a2f22ee15798/apollo_11_command_module_combined.glb?v=1706430641116"></a-asset-item>
         <a-mixin id="panel" material="shader:flat;transparent:true;" look-at="[camera]"></a-mixin>
       </a-assets>
     
@@ -28,7 +29,7 @@
       <a-entity gltf-model="#moon" position="0 -1 -5" scale="0.005 0.005 0.005" shadow="receive: true"></a-entity>
       <a-entity gltf-model="#spaceship" position="2.17247 -1.01404 -5" scale="1.5 1.5 1.5" shadow="cast: true" sound="src:#sang; on:click;"
                 event-set__enter="_event: click; _target: #ship; visible: true;">
-        <a-animation sttibut></a-animation>
+        <a-animation begin="click" attribute="visible" to="false" dur="1"></a-animation>
       </a-entity>
       
       <a-entity id="buzz" gltf-model="#astronaut" position="-1.90353 -0.91089 -2.08588" animation-mixer="duration: 20" rotation="0 -2.5135658472389215 0" sound="src:#buzzsound; on:click;" shadow="cast: true"
@@ -41,6 +42,7 @@
       <a-entity gltf-model="#star" position="-100 -400 150" scale="6 6 6" rotation=""></a-entity>
       <a-entity gltf-model="#sun" scale="4 4 4" position="0 52.80932 477.7354"></a-entity>
       <a-entity gltf-model="#eart" position="-13.7689 -128.68212 -461.38592" scale="200 200 200" shadow="receive: true"></a-entity>
+      <a-entity gltf-model="apollo" position="0 2 -5" scale="0.1 0.1 0.1" shadow="cast: true"></a-entity>
       
       <a-camera><a-cursor color="whith"></a-cursor></a-camera>
       
@@ -57,7 +59,7 @@
         </a-text>
       </a-plane>
       
-      <a-plane id="cardnile" position="4.41245 2.72693 6.23068" color="#6A8D92" width="5" height="1" material="" geometry="" rotation="0 -34.04973584903456 0" visible="false">
+      <a-plane id="cardnile" position="4.412 2.727 6.231" color="#6A8D92" width="5" height="1" material="" geometry="" rotation="0 -49.636479707773475 0" visible="">
         <a-text position="-2.47352 0 0.01" align="left" value="Nile" text="value: Neil Armstrong was an American astronaut who was the first person to stand on the lunar surface on July 20, 1969, during the Apollo 11 space flight.">
         </a-text>
       </a-plane>

@@ -10,13 +10,13 @@
           var myVideo = document.querySelector('#video');
           var videoControls = document.querySelector('#videocontrols');
           var self = this;
-          videoControls.addEventListener('click', function(){ // ใช้ event listener กับ videoControls ไม่ใช่ this.el
+          videoControls.addEventListener('click', function(){
             if(myVideo.paused){
               myVideo.play();
-              self.el.setAttribute('src', '#pause'); // ใช้ setAttribute เพื่อเปลี่ยนรูปภาพ
+              self.el.setAttribute('src', '#pause');
             }else{
               myVideo.pause();
-              self.el.setAttribute('src', '#play'); // ใช้ setAttribute เพื่อเปลี่ยนรูปภาพ
+              self.el.setAttribute('src', '#play');
             }
           });
         }

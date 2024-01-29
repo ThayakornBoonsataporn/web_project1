@@ -19,6 +19,7 @@
         <a-asset-item id="eart" src="https://cdn.glitch.me/4fc89268-7b85-4a5a-99c9-a2f22ee15798/3d_planet_earth_transparent_bg.glb?v=1706376462491"></a-asset-item>
         <audio id="nilesound" src="https://cdn.glitch.global/4fc89268-7b85-4a5a-99c9-a2f22ee15798/nile.mp3?v=1706421183468"></audio>
         <audio id="buzzsound" src="https://cdn.glitch.global/4fc89268-7b85-4a5a-99c9-a2f22ee15798/buzz.mp3?v=1706421184675"></audio>
+        <audio id="apollosound" src="https://cdn.glitch.global/4fc89268-7b85-4a5a-99c9-a2f22ee15798/Apollo%2011%20Radio.mp3?v=1706548407300"></audio>
         <audio id="michelsound" src="https://cdn.glitch.global/4fc89268-7b85-4a5a-99c9-a2f22ee15798/michel.mp3?v=1706434366767"></audio>
         <audio id="sang" src="https://cdn.glitch.global/4fc89268-7b85-4a5a-99c9-a2f22ee15798/Y2meta.app%20-%20The%20Sounds%20Of%20The%20Moon%20(128%20kbps).mp3?v=1706500623004"></audio>
         <a-asset-item id="apollo" src="https://cdn.glitch.me/4fc89268-7b85-4a5a-99c9-a2f22ee15798/apollo_11_command_module_combined.glb?v=1706430641116"></a-asset-item>
@@ -26,8 +27,8 @@
     
       
       <a-sky color="black"></a-sky>
-      <a-entity gltf-model="#moon" position="0 -1 -5" scale="0.005 0.005 0.005" shadow="receive: true" sound="src:#sang; on:click; volume:4; loop:true;"></a-entity>
-      <a-entity gltf-model="#spaceship" position="2.17247 -1.01404 -5" scale="1.5 1.5 1.5" shadow="cast: true"
+      <a-entity gltf-model="#moon" position="0 -1 -5" scale="0.005 0.005 0.005" shadow="receive: true" sound="src:#sang; on:click; volume:5; loop:true;"></a-entity>
+      <a-entity gltf-model="#spaceship" position="2.17247 -1.01404 -5" scale="1.5 1.5 1.5" shadow="cast: true" sound="src:#apollosound; on:click; volume:5;"
                 event-set__enter="_event: click; _target: #ship; visible: true;">
         <a-animation begin="click" attribute="visible" to="false" dur="1"></a-animation>
       </a-entity>
